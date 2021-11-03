@@ -1,0 +1,126 @@
+/*style glassmorphism*/
+
+/*La police téléchargée sur fontSquirrel, copier collé du fichier CSS fourni*/
+@font-face {
+    font-family: 'ambleregular';
+    src: url('Amble-Regular-webfont.eot');
+    src: url('Amble-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Amble-Regular-webfont.woff2') format('woff2'),
+         url('Amble-Regular-webfont.woff') format('woff'),
+         url('Amble-Regular-webfont.ttf') format('truetype'),
+         url('Amble-Regular-webfont.svg#ambleregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/*La police Amble puis des polices par défaut*/
+* {
+    font-family: 'ambleregular','poppins','Times New Roman', sans-serif;
+}
+
+/*cadrage de mon arrière plan*/
+body {
+    position: relative; /*position relative par rapport à la position absolue de ma carte*/
+    height: 100vh; /*prend toute la hauteur de mon appareil*/
+    background: url(glassmorphismpicture.jpg); /*URL du fond dans le dossier*/
+    background-size: 100% 100%; /*mon fond occupe tout l'espace*/
+    margin: auto; /*centre parfaitement mon fond sans scroll*/
+}
+
+/*Style de la carte*/
+.carte {
+    position: absolute; /*position absolue par rapport à la position relative du fond*/
+    top: 15%;        /*position de la carte bien centrée*/
+    left: 15%;
+    height: 70%;
+    width: 70%;
+    background: rgb(14, 175, 162,0.5); /*bleu-vert de la carte avec l'opacitée pour le GlassMorphism*/
+    backdrop-filter: blur(5px); /*flou de mon glassmorphism*/
+    border-radius: 15px; /*j'arrondis les bords de la carte*/
+    box-shadow: 6px 12px 9px 5px rgba(40, 219, 166, 0.5); /*je crée un effet de bordure en transparence*/
+}
+
+/*arrangement de mes trois élements : photo, bloc de motivation et liens*/
+.carte .contenu {
+    display: flex;    
+}
+
+/*cadrage de l'élément photo*/
+.carte .contenu .photo {
+    padding-left: 2%;
+    padding-top: 2%; /*décalage en haut à gauche pour espacer la photo*/
+    width: 50%; /*hauteur et largeur du contenu*/
+    height: 50%;
+}
+
+/*style de l'image photo*/
+.carte .contenu .photo img {
+    width: 60%; /*hauteur et largeur de la photo*/
+    height: 60%;
+    border-radius: 50%; /*la photo est arrondie*/
+    border-bottom: 5px solid rgba(31, 214, 92, 0.3); /*bleu-vert du cadre de la photo avec opacitée pour le GlassMorphism*/
+    border-top: 5px solid rgb(31, 214, 92, 0.3);
+    border-left: 5px solid rgb(31, 214, 92, 0.3);
+    border-right: 5px solid rgb(31, 214, 92, 0.3);  
+}
+
+/*Style du titre Aurélien...*/
+.carte .contenu .bloc_milieu .titre_principal h1 {
+    margin-top: 6%; /*epace en haut pour décaler le titre*/
+    margin-right: 30%;
+    color: white; /*le titre est en blanc*/
+    font-size: 1.7em; /*titre en plus gros que le bloc motivation*/
+    padding: 0; /*aucun padding*/
+}
+
+.carte .contenu .bloc_milieu .motivation ul {
+    margin-right: 15%;  /*décalage à droite pour gagner de l'espace par rapport aux liens*/ 
+    margin-left: -15%; /*décalage négatif pour gagner de l'espace par rapport à la photo*/
+    color: white; /*texte de motivation en blanc*/
+    font-size: 1.1em; /*taille d'ecriture plus petite que pour le titre*/
+}
+
+/*style du titre du bloc de liens*/
+.carte .contenu .liens h2 {
+    margin-top: 5%; /*marge en haut*/
+    margin-bottom: -5%; /*marge par rapport aux liens*/
+    margin-left: 5%;
+    font-size: 1.4em; /*taille plus petite que le titre principal*/
+    color: white; /*ecriture en blanc*/
+}
+
+/*style du bloc de lien*/
+.carte .contenu .liens ol {
+    margin-left: -35%;
+    padding-left: -10%;
+}
+
+/*style des lien*/
+.carte .contenu .liens ol, a {
+    margin-right: 10%;
+    padding-left: 5%;
+    list-style-type: none;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 300;
+    border-radius: 9px;
+    box-shadow: 4px 6px 8px 3px rgb(17, 179, 38,0.5);
+    text-align: left;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
